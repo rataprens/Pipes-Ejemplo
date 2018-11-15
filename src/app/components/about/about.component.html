@@ -1,0 +1,7 @@
+<h4>Angular <small>ngConf / Tutoriales</small></h4>
+<hr>
+<div class="card-columns" style="padding-bottom:50px">
+    <div class="card" *ngFor="let video of videos">
+        <iframe width="360" height="200" [src]="video.url | domseguro:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>

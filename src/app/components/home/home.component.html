@@ -1,0 +1,130 @@
+<div class="container text-center" style="padding-bottom:30px">
+    <h4> Ejemplos de Pipes Angular</h4>
+</div>
+<table class="table table-bordered table-dark text-center">
+    <thead>
+        <tr>
+            <th scope="col">Variable</th>
+            <th scope="col">Pipe</th>
+            <th scope="col">Producto</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> {{nombreUpper}} </td>
+            <td> uppercase </td>
+            <td> {{nombreUpper | uppercase}} </td>
+        </tr>
+        <tr>
+            <td> {{nombreLower}} </td>
+            <td> lowercase </td>
+            <td> {{nombreLower | lowercase}} </td>
+        </tr>
+        <tr>
+            <td>{{nombreUpper}}</td>
+            <td> slice:2 </td>
+            <td> {{nombreUpper | slice:2}} </td>
+        </tr>
+        <tr>
+            <td> {{nombreUpper}} </td>
+            <td> slice:0:2 </td>
+            <td> {{nombreUpper | slice:0:2}} </td>
+        </tr>
+        <tr>
+            <td> {{arreglo}} </td>
+            <td> slice:1:5 </td>
+            <td> {{arreglo | slice:1:5}} </td>
+        </tr>
+        <tr>
+            <td> {{PI}} </td>
+            <td> number </td>
+            <td> {{PI | number}} </td>
+        </tr>
+        <tr>
+            <td> {{PI}} </td>
+            <td> number:'2.0-2' </td>
+            <td> {{PI | number:'2.0-2'}} </td>
+        </tr>
+        <tr>
+            <td> {{a}} </td>
+            <td> percent </td>
+            <td> {{a | percent}} </td>
+        </tr>
+        <tr>
+            <td> {{a}} </td>
+            <td> percent:'3.1-2' </td>
+            <td> {{a | percent:'3.1-2'}} </td>
+        </tr>
+        <tr>
+            <td> {{salario}} </td>
+            <td> currency </td>
+            <td> {{salario | currency}} </td>
+        </tr>
+        <tr>
+            <td> {{salario}} </td>
+            <td>currency:'CLP'</td>
+            <td> {{salario | currency:'CLP'}} </td>
+        </tr>
+        <tr>
+            <td> {{salario}} </td>
+            <td> currency:'EUR':display:'4.0-0' </td>
+            <td> {{salario | currency:'EUR':display:'4.0-0'}} </td>
+        </tr>
+        <tr>
+            <td> Promesa </td>
+            <td>async</td>
+            <td> {{datoPromesa | async}} </td>
+        </tr>
+        <tr>
+            <td> {{fecha}} </td>
+            <td>date</td>
+            <td> {{fecha | date}} </td>
+        </tr>
+        <tr>
+            <td> {{fecha}} </td>
+            <td> date:'short' </td>
+            <td> {{fecha | date:'short'}} </td>
+        </tr>
+        <tr>
+            <td> {{fecha}} </td>
+            <td> date:'medium' </td>
+            <td> {{fecha | date:'medium'}} </td>
+        </tr>
+        <tr>
+            <td> {{fecha}} </td>
+            <td> personalizado date:'MMMM - dd' </td>
+            <td> {{fecha | date:'MMMM - dd'}} </td>
+        </tr>
+        <tr>
+            <td> {{nombre}} </td>
+            <td> capitalizado </td>
+            <td> {{nombre | capitalizado}} </td>
+        </tr>
+        <tr>
+            <td> {{nombre}} </td>
+            <td> capitalizado:false </td>
+            <td> {{nombre | capitalizado:false}} </td>
+        </tr>
+        <tr>
+            <td> {{nombreUpper}} </td>
+            <td> contraseña: {{ activado }}
+                <div class="container" style="padding-top:20px">
+                    <button class="btn btn-outline-success" type="button" (click)='activado = !activado'>
+                            Activar/Descativar
+                    </button>
+                </div>
+            </td>
+            <td> {{nombreUpper | contrasena:activado}} </td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<h4>Pipe Json con etiqueta PRE</h4>
+<pre>
+    {{heroe | json}}
+</pre>
+
+<br>
+<br>
+<br>
+<br>
